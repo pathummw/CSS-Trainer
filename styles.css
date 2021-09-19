@@ -1,0 +1,101 @@
+:root{
+    --sky-blue: #87CEEB; 
+    --garden-green: #93c12d;
+    --road-black: #171717;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace, 'Arial Narrow', Arial, sans-serifs;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(248, 248, 248);
+}
+
+.sky{
+    background-color: var(--sky-blue);
+    height: 40vh;
+}
+.garden{
+    background-color: var(--garden-green);
+    height: 35vh;
+}
+.road{
+    background-color: var(--road-black);
+    height: 15vh;
+}
+nav{
+    /* display: flex; */
+}
+
+ul{
+    background-color: var(--sky-blue);
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+    list-style: none;
+
+}
+
+li{
+    /* text-decoration: none; */
+    padding: 0 20px;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+div::before{
+    content: "I am before Pathum"
+}
+div::after{
+    content: "Weerathunga"
+}
+
+.test span{
+    display:block;
+    width: 100px;
+    height: 100px;
+    background-color: deeppink;
+    border-radius: 50%;
+    animation-name: spanCircle;
+    animation-duration: 10s;
+}
+
+@keyframes spanCircle{
+    0% {background-color: red;}
+    50% {background-color: yellow;}
+    100% {background-color: green;}
+}
+
+.roseCar{
+    position: absolute;
+    bottom: 50px;
+    animation-name: drive;
+    animation-duration: 8s;
+    animation-fill-mode: both;  /* issarahata gihin nawathinna */
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  /* Yana rataawa wenas karanna */
+}
+.roadRoller{
+    position: absolute;
+    animation-name: drive;
+    animation-duration: 20s;
+    animation-direction: reverse;
+    animation-fill-mode: both; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes drive {
+    from{transform:  translateX(-200);}
+    to{ transform: translateX(2500px);}
+}
